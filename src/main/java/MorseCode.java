@@ -1,24 +1,21 @@
 public class MorseCode {
 
-    /*
-     *First we going to create a morseCode database.
-     */
+    // First we going to create a morseCode database.
 
     String[] morseCodeAlphabets = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.",
             "---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..","/"};
-    char[] alphabets = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' '};
 
-    /*
-     *This is a method that takes a string as input and returns a morseCode.
-     */
+    char[] alphabets = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x',
+            'y','z',' '};
 
+    // This is a method that takes a string as input and returns a morseCode.
     String lettersToMorseCode(String string) {
 
         StringBuilder str = new StringBuilder();
 
-        for (int i=0;i<string.length();i++) {
+        for (int i = 0; i <string.length(); i++) {
 
-            for (int j = 0;j < alphabets.length;j++){
+            for (int j = 0; j < alphabets.length; j++){
                 if (alphabets[j] == string.toLowerCase().charAt(i)) {
                     str.append(morseCodeAlphabets[j]);
                     str.append(" ");
@@ -29,10 +26,7 @@ public class MorseCode {
         return str.toString();
     }
 
-    /*
-     *This is a method that takes a morseCode as input and returns a string.
-     */
-
+    // This is a method that takes a morseCode as input and returns a string.
     String morseCodeToLetters(String[] stringArray) {
 
         StringBuilder str =  new StringBuilder();
